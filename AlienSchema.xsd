@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" 
+targetNamespace="http://www.telusko.org/AlienSchema" 
+xmlns:tns="http://www.telusko.org/AlienSchema" 
+elementFormDefault="qualified">
+
+<complexType name="alienstype">
+	<sequence>
+		<element name="alien" type="tns:alientype" maxOccurs="3" minOccurs="1"></element>
+	</sequence>
+</complexType>
+<complexType name="alientype">
+	<sequence>
+		<element name="name" type="string"></element>
+		<element name="salary" type="integer"></element>
+	</sequence>
+	<attribute name="aid" type="ID" use="required"></attribute>
+</complexType>
+	<element name="globalaliens" type="tns:alienstype"/>
+	
+</schema>
